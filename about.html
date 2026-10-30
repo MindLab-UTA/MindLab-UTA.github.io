@@ -1,27 +1,258 @@
-<section id="mentor">
-  <div class="wrap">
-    <h2>Our mentor</h2>
-    <div class="mentor">
-      <div>
-        <h3 style="font-size:1.8rem">Dr. Crystal M. Cooper</h3>
-        <ul class="roles">
-          <li>Assistant Professor of Psychology, UT Arlington</li>
-          <li>Principal Investigator, Neuroscience Research Center</li>
-          <li>Principal Investigator, Jane and John Justin Neurosciences Center, Cook Children's</li>
-          <li>Adjunct Assistant Professor of Psychiatry, UT Southwestern Medical Center</li>
-        </ul>
-        <a class="btn blue" href="https://www.uta.edu/academics/faculty/profile?user=crystal.cooper">UTA faculty profile</a>
-        <a class="btn outline" href="https://www.ncbi.nlm.nih.gov/myncbi/1hkCT-gj9UH57/bibliography/public/">Publications (NCBI)</a>
-        <a class="btn outline" href="https://www.researchgate.net/profile/Crystal_Cooper2">ResearchGate</a>
-        <a class="btn outline" href="https://www.linkedin.com/in/crystal-cooper-ph-d-254366104/">LinkedIn</a>
-        <p style="margin-top:18px">Dr. Cooper is a cognitive neuroscientist originally from San Diego, California. She completed all of her degrees at UT Arlington, trained and worked in psychiatry at UT Southwestern, and joined Cook Children's as a principal investigator in 2020. Her work uses brain imaging and behavioral testing to find measurable signs of disease risk, disease state, and treatment response, with a focus on children and teens.</p>
-      </div>
-      <!-- Updated image element -->
-      <div class="portrait">
-        <img src="mentor.jpg" alt="Dr. Crystal M. Cooper">
-        <!-- Alternatively, if using the direct URL (Option 2): -->
-        <!-- <img src="https://profiles.digitalmeasures.com/clients/1d35c932-8c2a-5c36-87f1-18cc1edaec2c/users/2333058/instruments/1278/images?fieldId=1554804" alt="Dr. Crystal M. Cooper"> -->
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile - About Me</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Global Reset & Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* Main Container Layout */
+        .profile-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styles */
+        .profile-sidebar {
+            flex: 1;
+            min-width: 280px;
+            background-color: #002b49; /* UTA-inspired dark blue */
+            color: #ffffff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .profile-img-wrapper {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #f58220; /* UTA orange accent */
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-title {
+            font-size: 1.05rem;
+            color: #f58220;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .profile-department {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-divider {
+            border: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+        }
+
+        .contact-section {
+            text-align: left;
+        }
+
+        .contact-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f58220;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contact-list i {
+            color: #f58220;
+            margin-top: 3px;
+        }
+
+        .contact-list a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
+        .profile-main {
+            flex: 2;
+            min-width: 320px;
+            padding: 40px;
+        }
+
+        .profile-main section {
+            margin-bottom: 35px;
+        }
+
+        .profile-main h2 {
+            font-size: 1.4rem;
+            color: #002b49;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+
+        .profile-main p {
+            color: #475569;
+            font-size: 1rem;
+        }
+
+        /* Lists and Tags */
+        .education-list, .courses-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #475569;
+        }
+
+        .education-list li, .courses-list li {
+            margin-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+            }
+            .profile-sidebar {
+                text-align: center;
+            }
+            .contact-section {
+                text-align: center;
+            }
+            .contact-list li {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Sidebar / Contact Info -->
+        <aside class="profile-sidebar">
+            <div class="profile-img-wrapper">
+                <img src="https://via.placeholder.com/160" alt="Faculty Profile Photo" class="profile-img">
+            </div>
+            <h1 class="profile-name">Crystal Cooper, Ph.D.</h1>
+            <p class="profile-title">Assistant Professor</p>
+            <p class="profile-department">Department of Communication</p>
+            
+            <hr class="sidebar-divider">
+
+            <div class="contact-section">
+                <h3>Contact Information</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:crystal.cooper@uta.edu">crystal.cooper@uta.edu</a></li>
+                    <li><i class="fas fa-phone"></i> (817) 555-0192</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Office: Pickard Hall 402</li>
+                    <li><i class="fas fa-clock"></i> Office Hours: Mon/Wed 2:00 PM - 4:00 PM</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="profile-main">
+            <section class="bio-section">
+                <h2>Biography</h2>
+                <p>
+                    Dr. Crystal Cooper is an Assistant Professor in the Department of Communication. Her research focuses on digital media, interpersonal communication, and the impact of emerging technologies on modern society. She has published numerous peer-reviewed articles and is dedicated to fostering an interactive and inclusive classroom environment.
+                </p>
+            </section>
+
+            <section class="education-section">
+                <h2>Education</h2>
+                <ul class="education-list">
+                    <li><strong>Ph.D. in Communication</strong> – University of Texas at Austin</li>
+                    <li><strong>M.A. in Media Studies</strong> – University of Michigan</li>
+                    <li><strong>B.A. in Journalism</strong> – University of Texas at Arlington</li>
+                </ul>
+            </section>
+
+            <section class="research-section">
+                <h2>Research Interests</h2>
+                <div class="tags">
+                    <span class="tag">Digital Media</span>
+                    <span class="tag">Interpersonal Communication</span>
+                    <span class="tag">Technology & Society</span>
+                    <span class="tag">Social Media Analytics</span>
+                </div>
+            </section>
+
+            <section class="teaching-section">
+                <h2>Courses Taught</h2>
+                <ul class="courses-list">
+                    <li>COMM 1301: Introduction to Human Communication</li>
+                    <li>COMM 3310: Digital Media & Society</li>
+                    <li>COMM 4350: Advanced Communication Research Methods</li>
+                </ul>
+            </section>
+        </main>
     </div>
-  </div>
-</section>
+
+</body>
+</html>
