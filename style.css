@@ -1,0 +1,84 @@
+/* MindLab UT Arlington - shared styles. Change colors in :root below. */
+:root{
+  --ink:#10243a; --muted:#4d6076; --paper:#f3f7fb; --white:#fff; --blue:#0b5cab; --navy:#0a2540; --sky:#cfe3f6; --orange:#f58025; --line:#c9d6e3;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif; --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 var(--body)}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+p{margin:0 0 14px;max-width:44em}
+h2{font:800 1.9rem/1.1 var(--head);margin:0 0 20px;letter-spacing:-.02em}
+h3{font:800 1.15rem var(--head);margin:0 0 6px}
+
+/* Header */
+.site-header{background:var(--white);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:14px;padding-bottom:14px}
+.brand{font:800 20px var(--head);color:var(--ink);text-decoration:none}
+.site-header nav a{margin-left:20px;color:var(--ink);text-decoration:none;font-weight:600;padding:4px 0;border-bottom:3px solid transparent}
+.site-header nav a:hover{color:var(--blue)}
+.site-header nav a.active{border-bottom-color:var(--orange)}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--white);padding:84px 0 92px}
+.hero h1{font:800 clamp(2.4rem,6vw,4.2rem)/1.02 var(--head);margin:0 0 18px;letter-spacing:-.03em;max-width:14em}
+.hero p{font-size:1.3rem;color:#c8d9ea;margin:0 0 30px}
+.btn{display:inline-block;background:var(--orange);color:#1a1205;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:600;margin:0 10px 10px 0}
+.btn:hover{background:#ff9444}
+.btn.alt{background:transparent;color:var(--white);border:2px solid var(--white);padding:10px 22px}
+.btn.alt:hover{background:rgba(255,255,255,.12)}
+.btn.blue{background:var(--blue);color:#fff}
+.btn.blue:hover{background:#094a8b}
+.btn.outline{background:transparent;color:var(--blue);border:2px solid var(--blue);padding:8px 16px;font-size:.95rem}
+.btn.outline:hover{background:var(--sky)}
+
+/* Page title band (inner pages) */
+.page-title{background:var(--navy);color:var(--white);padding:44px 0}
+.page-title h1{font:800 clamp(2rem,5vw,3rem)/1.05 var(--head);margin:0;letter-spacing:-.02em}
+
+/* Sections */
+section{padding:56px 0}
+section + section{border-top:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:var(--white);border:1px solid var(--line);border-top:5px solid var(--sky);border-radius:6px;padding:22px}
+.card:nth-child(1){border-top-color:var(--orange)}
+.card:nth-child(2){border-top-color:var(--blue)}
+.card p{margin:0;color:var(--muted)}
+.pub{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:6px;padding:18px 22px;margin-bottom:16px}
+.pub p{margin:0;color:var(--muted)}
+.pub .meta{font-size:.95rem;margin-top:4px}
+
+/* About / mentor */
+.mentor{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}
+.roles{margin:0 0 18px;padding:0;list-style:none;color:var(--muted)}
+.roles li{padding:6px 0 6px 14px;border-left:4px solid var(--sky)}
+.roles li:first-child{border-left-color:var(--orange);color:var(--ink);font-weight:600}
+.portrait{aspect-ratio:4/5;background:var(--sky);border-radius:8px;display:grid;place-items:center;color:var(--muted);text-align:center;padding:16px;font-size:.95rem}
+.portrait img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.entry{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:12px 0}
+.entry .when{color:var(--muted);font-weight:600}
+.entry p{margin:0;color:var(--muted)}
+ul.plain{margin:0;padding-left:20px;max-width:44em}
+ul.plain li{margin-bottom:10px}
+.awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.award{border-left:4px solid var(--orange);padding-left:14px}
+.award p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* Footer */
+.site-footer{background:var(--navy);color:#c8d9ea;padding:44px 0 28px;font-size:.98rem}
+.site-footer h3{color:var(--white);font-size:1.05rem}
+.site-footer a{color:#c8d9ea}
+.site-footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.site-footer p{margin:0 0 6px}
+.site-footer .copy{margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.18);font-size:.9rem}
+
+@media (max-width:720px){
+  .mentor{grid-template-columns:1fr;gap:24px}
+  .portrait{max-width:240px}
+  .entry{grid-template-columns:1fr;gap:2px}
+  .site-header nav a{margin-left:12px}
+  .hero{padding:56px 0 64px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
